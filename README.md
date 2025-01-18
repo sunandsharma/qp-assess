@@ -66,7 +66,6 @@ curl --location 'http://localhost:8080/grocery-service/admin/items' \
 curl --location --request PUT 'http://localhost:8080/grocery-service/admin/items/1/inventory?stock=2' \
 --header 'Authorization: Basic YWRtaW46YWRtaW4xMjM=' 
 
-
     4) To update item
 curl --location --request PUT 'http://localhost:8080/grocery-service/admin/items/1' \
 --header 'Content-Type: application/json' \
