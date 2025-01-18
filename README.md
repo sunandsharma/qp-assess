@@ -4,8 +4,8 @@ Grocery Booking API
 Authentication: Basic,
 Authorization: Role-Based
 
-   Database Used: PostgreSQL
-    **Database Name**: grocery_db
+   Database Used: PostgreSQL,
+    **Database Name**: grocery_db,
     **SQL Queries to create tables**:
 >     CREATE TABLE users (
 >     id SERIAL PRIMARY KEY,
