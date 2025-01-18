@@ -1,7 +1,7 @@
-# qp-assess
+# qp-assessment
 Grocery Booking API
 
-Authentication: Basic
+Authentication: Basic,
 Authorization: Role-Based
 
    Database Used: PostgreSQL
