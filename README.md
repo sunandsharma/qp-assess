@@ -41,4 +41,7 @@ CREATE TABLE order_items (
     grocery_item_id BIGINT REFERENCES grocery_items(id),
     quantity INT NOT NULL
 );
+
+To **Build Docker Image**: docker build -t grocery-booking-app .
+To **run the container**: docker run -p 8080:8080 grocery-booking-app
             
