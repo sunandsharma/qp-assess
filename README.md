@@ -44,4 +44,22 @@ CREATE TABLE order_items (
 
 To **Build Docker Image**: docker build -t grocery-booking-app .
 To **run the container**: docker run -p 8080:8080 grocery-booking-app
+
+
+CURL Requests for ADMIN:
+      1) To view Grocery items
+curl --location 'http://localhost:8080/grocery-service/admin/items' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic YWRtaW46YWRtaW4xMjM=' \
+--data ''
+      2) To Add Grocery Item
+curl --location 'http://localhost:8080/grocery-service/admin/items' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic YWRtaW46YWRtaW4xMjM=' \
+--data '{
+    "id":1,
+    "name":"Apple",
+    "price":50.0,
+    "stock":3
+}'
             
