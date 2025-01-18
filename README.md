@@ -62,4 +62,46 @@ curl --location 'http://localhost:8080/grocery-service/admin/items' \
     "price":50.0,
     "stock":3
 }'
-            
+    3) To update Inventory
+curl --location --request PUT 'http://localhost:8080/grocery-service/admin/items/1/inventory?stock=2' \
+--header 'Authorization: Basic YWRtaW46YWRtaW4xMjM=' 
+
+
+    4) To update item
+curl --location --request PUT 'http://localhost:8080/grocery-service/admin/items/1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic YWRtaW46YWRtaW4xMjM=' \
+--header 'Cookie: JSESSIONID=62344F6FEBB756CEB715F19D9C3AAB52' \
+--data '{
+    "id":1,
+    "name": "Apple",
+    "price": 60.0,
+    "stock":1
+}'
+
+   5) To delete grocery item
+     curl --location --request DELETE 'http://localhost:8080/grocery-service/admin/items/1/' \
+--header 'Authorization: Basic YWRtaW46YWRtaW4xMjM='
+
+
+Curl Requests for User
+   1) View Items
+
+  curl --location 'http://localhost:8080/grocery-service/user/items' \
+--header 'Authorization: Basic dXNlcjp1c2VyMTIz' \
+--data ''
+
+  2) Place Order
+
+      curl --location 'http://localhost:8080/grocery-service/user/orders' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic dXNlcjp1c2VyMTIz' \
+--data '{
+    "userId":2,
+    "items": [
+        {
+            "groceryItemId":2,
+            "quantity":2
+        }
+    ]
+}'
